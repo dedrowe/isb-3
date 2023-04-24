@@ -15,7 +15,10 @@ if __name__ == "__main__":
     group.add_argument('-enc', '--encryption', help='Запускает режим шифрования')
     group.add_argument('-dec', '--decryption', help='Запускает режим дешифрования')
     args = parser.parse_args()
-    settings = read_settings()
+    if args.custom:
+        settings = read_settings(args.custom)
+    else:
+        settings = read_settings()
     if settings:
         if args.generation:
             symmetric_key = generate_symmetric_key(settings['key_length'])

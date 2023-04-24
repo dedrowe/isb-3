@@ -21,7 +21,7 @@ def save_bytes_sequence(text: bytes, file: str) -> None:
 
 def read_bytes_sequence(file: str) -> bytes:
     """
-    Фукнция считывает бинарную последовательность из файла
+    Функция считывает бинарную последовательность из файла
     :param file: Путь к файлу
     :return: Бинарная полседовательность
     """

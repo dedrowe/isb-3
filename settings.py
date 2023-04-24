@@ -18,8 +18,8 @@ settings = {
 def read_settings(file_with_settings: str = "files/settings.json") -> dict:
     """
     Функция считывает настройки из файла
-    :param file_with_settings: путь к файлу с настройками
-    :return: настройки
+    :param file_with_settings: Путь к файлу с настройками
+    :return: Настройки
     """
     settings = None
     try:

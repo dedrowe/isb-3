@@ -58,7 +58,7 @@ def serialize_asymmetric_keys(public_key, private_key, public_pem: str, private_
     Функция сериализует ключи асимметричного алгоритма шифрования
     :param public_key: Публичный ключ
     :param private_key: Приватный ключ
-    :param public_pem: Пукть к файлу в который сериализуется публичный ключ
+    :param public_pem: Путь к файлу в который сериализуется публичный ключ
     :param private_pem: Путь к файлу в который сериализуется приватный ключ
     :return: Функция ничего не возвращает
     """

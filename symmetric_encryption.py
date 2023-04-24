@@ -12,7 +12,7 @@ def generate_symmetric_key(key_length: int) -> bytes:
     """
     Функция генерирует ключ симметричного алгоритма шифрования
     :param key_length: Длина ключа
-    :return: ключ
+    :return: Ключ
     """
     key = os.urandom(key_length)
     logging.info(f"Ключ симметричного шифрования успешно сгенерирован")
