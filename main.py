@@ -8,6 +8,8 @@ from settings import read_settings
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument('-cus', '--custom', type=str,
+                        help='Использует пользовательский файл с настройками, необходимо указать путь к файлу')
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('-gen', '--generation', help='Запускает режим генерации ключей')
     group.add_argument('-enc', '--encryption', help='Запускает режим шифрования')
@@ -20,7 +22,6 @@ if __name__ == "__main__":
             private_key, public_key = generate_pair_of_keys()
             serialize_asymmetric_keys(public_key, private_key, settings['public_key'], settings['private_key'])
             save_bytes_sequence(asymmetric_encrypt(public_key, symmetric_key), settings['symmetric_key'])
-
         elif args.encryption:
             private_key = deserialize_private_key(settings['private_key'])
             c_key = read_bytes_sequence(settings['symmetric_key'])

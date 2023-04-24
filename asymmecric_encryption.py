@@ -35,7 +35,7 @@ def asymmetric_encrypt(public_key, text: bytes) -> bytes:
     c_text = public_key.encrypt(text,
                                 padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()), algorithm=hashes.SHA256(),
                                              label=None))
-    logging.info("Текст успешно закодирован")
+    logging.info("Текст успешно зашифрован")
     return c_text
 
 

@@ -28,7 +28,7 @@ def read_bytes_sequence(file: str) -> bytes:
     try:
         with open(file, 'rb') as f:
             text = f.read()
-            logging.info("Бинарная последовательность успешно считан")
+            logging.info("Бинарная последовательность успешно считана")
     except OSError as err:
-        logging.warning(f"{err} Не удалось считать Бинарную последовательность")
+        logging.warning(f"{err} Не удалось считать бинарную последовательность")
     return text
