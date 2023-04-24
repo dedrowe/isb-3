@@ -1,5 +1,8 @@
 import logging
 
+logger = logging.getLogger()
+logger.setLevel('INFO')
+
 
 def save_bytes_sequence(text: bytes, file: str) -> None:
     """

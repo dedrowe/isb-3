@@ -6,6 +6,9 @@ from cryptography.hazmat.primitives.serialization import load_pem_public_key, lo
 from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.primitives import hashes
 
+logger = logging.getLogger()
+logger.setLevel('INFO')
+
 
 def generate_pair_of_keys() -> tuple:
     """

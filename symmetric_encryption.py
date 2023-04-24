@@ -5,6 +5,10 @@ from cryptography.hazmat.primitives import padding
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 
 
+logger = logging.getLogger()
+logger.setLevel('INFO')
+
+
 def generate_symmetric_key(key_length: int) -> bytes:
     """
     Функция генерирует ключ симметричного алгоритма шифрования

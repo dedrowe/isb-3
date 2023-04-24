@@ -1,6 +1,9 @@
 import logging
 import json
 
+logger = logging.getLogger()
+logger.setLevel('INFO')
+
 settings = {
     'initial_file': 'files/initial_file.txt',
     'encrypted_text': 'files/encrypted_text.txt',
